@@ -2,18 +2,22 @@
 
 ## User Stories
 
-`As an internet user
-So that I can remember favourite websites
-I'd like to view a list of links from a database (of favourite website links)`
+`As a time-pressed user`  
+`So that I can quickly go to web sites I regularly visit`
+`I would like to see a list of links on the homepage`  
 
-`As an internet user
-So that I can remember favourite websites
-I'd like to add a new website to the database`
+`As a time-pressed user`
+`So that I can quickly find web sites I recently bookmarked`
+`I would like to see links in descending chronological order`
 
-`As an internet user
-So that I can categorise my favourite websites by theme
-I'd like to be able to add a tag to a link`
+`As a time-pressed user`
+`So that I can save a website`
+`I would like to add the site's address and title to my bookmark manager`
 
-`As an internet user
-So that I can search for favourite websites by theme
-I'd like to be able to filter the database by tag`
+`As a time-pressed user`
+`So that I can organise my many links into different categories for ease of search`
+`I would like to add tags to the links in my bookmark manager`
+
+`As a time-pressed user`
+`So that I can quickly find links on a particular topic`
+`I would like to filter links by tag`
