@@ -1,13 +1,6 @@
 feature 'Viewing links' do
-  # previous code omitted for brevity
-    before(:each) do
-      Link.create(url: 'http://www.makersacademy.com', title: 'Makers Academy', tags: [Tag.first_or_create(name: 'education')])
-      Link.create(url: 'http://www.google.com', title: 'Google', tags: [Tag.first_or_create(name: 'search')])
-      Link.create(url: 'http://www.zombo.com', title: 'This is Zombocom', tags: [Tag.first_or_create(name: 'bubbles')])
-      Link.create(url: 'http://www.bubble-bobble.com', title: 'Bubble Bobble', tags: [Tag.first_or_create(name: 'bubbles')])
-    end
-  
     scenario 'I can filter links by tag' do
+      create_new_tagged_links
       visit '/tags/bubbles'
   
       expect(page.status_code).to eq(200)
@@ -17,5 +10,11 @@ feature 'Viewing links' do
         expect(page).to have_content('This is Zombocom')
         expect(page).to have_content('Bubble Bobble')
       end
+    end
+
+    scenario 'I can add multiple tags to a new link' do
+      create_multi_tagged_link
+      link = Link.first
+      expect(link.tags.map(&:name)).to include('bubbles', 'things')
     end
   end

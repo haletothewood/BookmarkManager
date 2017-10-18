@@ -10,9 +10,7 @@ feature 'Creating new link' do
 
   scenario 'adding a tag to a link' do
     submit_new_link
-
-    within 'ul#links' do
-      expect(page).to have_content 'news'
-    end
+    link = Link.first
+    expect(link.tags.map(&:name)).to include("news")
   end
 end
