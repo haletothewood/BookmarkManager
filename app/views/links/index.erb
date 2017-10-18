@@ -5,8 +5,11 @@
 <ul id='links'>
     <% @links.each do |link| %>
   <li>
-      <%= link.title %>: 
-      <%= link.url %>
+      Title: <%= link.title %> -
+      URL: <%= link.url %>
+      <% link.tags.each do |tag| %>
+        Tag(s): <%= tag.title %>
+      <% end %>
   </li>
 <% end %>
 </ul>
