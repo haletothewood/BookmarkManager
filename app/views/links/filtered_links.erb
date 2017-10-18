@@ -1,0 +1,10 @@
+<ul id='links'>
+  <% @links.each do |link| %>
+    <li>
+    <% if link.tags.include? @tag %>
+        Title: <%= link.title %>
+        URL: <%= link.url %>
+    <% end %>
+    </li>
+  <% end %>
+</ul>

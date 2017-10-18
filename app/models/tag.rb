@@ -5,8 +5,8 @@ class Tag
 
   include DataMapper::Resource
 
-  property :id,     Serial
-  property :title,  String
-  
-  belongs_to :link, :required => false
+  has n, :links, through: Resource
+
+  property :id,    Serial
+  property :name,  String
 end

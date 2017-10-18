@@ -4,14 +4,14 @@
 
 <ul id='links'>
     <% @links.each do |link| %>
-  <li>
+    <li>
       Title: <%= link.title %> -
       URL: <%= link.url %>
       <% link.tags.each do |tag| %>
-        Tag(s): <%= tag.title %>
+        Tag(s): <%= tag.name %>
       <% end %>
-  </li>
-<% end %>
+    </li>
+    <% end %>
 </ul>
 
 <center><form action='/links/new'>
