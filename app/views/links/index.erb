@@ -5,8 +5,12 @@
 <ul id='links'>
     <% @links.each do |link| %>
   <li>
-      <%= link.title %>
+      <%= link.title %>: 
       <%= link.url %>
   </li>
 <% end %>
 </ul>
+
+<center><form action='/links/new'>
+<input type="submit" value="Add New Link" class="button">
+</form></center>
