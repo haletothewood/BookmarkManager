@@ -15,16 +15,20 @@ class BookmarkManager < Sinatra::Base
     end
   end
 
+  get '/' do
+    redirect '/users/new'
+  end
+  
   get '/users/new' do
     erb :'users/new'
   end
 
   post '/users' do
-   user = User.create(email: params[:email],
+   @user = User.create(email: params[:email],
                     password: params[:password],
                     password_confirmation: params[:password_confirmation])
-    if user.save
-      session[:user_id] = user.id
+    if @user.save
+      session[:user_id] = @user.id
       redirect to('/links')
     else
       flash.now[:notice] = "Sorry your passwords didn't match"
