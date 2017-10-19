@@ -1,22 +1,24 @@
 body {
-  background-color: rgb(207, 197, 161)
+  background-color: rgb(207, 197, 161);
 }
 
 h1 {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
   text-align: center;
-  font-size: 400%
+  font-size: 400%;
 }
 
 ul#links {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   list-style-position: inside;
+  font-size: 14px;
 }
 
 .button {
   background-color: rgb(207, 197, 161);
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: white;
   border: 2px solid white;
   width: 120px;
@@ -35,10 +37,10 @@ ul#links {
 input[type=text] { 
   text-align: center;
   font-size: 14px;
-  font-family: 'Work Sans', cursive;
+  font-family: 'Montserrat', cursive;
   width: 250px;
 	height: 30px;
-  border:3px 
+  border: 3px
   solid rgb(255, 255, 255); 
 }
 
