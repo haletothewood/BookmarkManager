@@ -1,19 +1,30 @@
 <head> <%= erb :head %> </head>
-
-<h1> Links </h1>
-
-<ul id='links'>
-    <% @links.each do |link| %>
-    <li>
-      Title: <%= link.title %> -
-      URL: <%= link.url %>
-      <% link.tags.each do |tag| %>
-        Tag: <%= tag.name %>
+<style>
+  div
+  {
+    display: inline-block;
+}
+</style>
+<h1> 
+  <div id='logo' style="background-color: white;">
+  </div>
+  Links 
+</h1>
+<div id ='links'>
+  <ul id='links'>
+      <% @links.each do |link| %>
+          <li>
+            Title: <%= link.title %> -
+            URL: <%= link.url %>
+            <% link.tags.each do |tag| %>
+            Tag: <%= tag.name %>
+            <% end %>
+          </li>
       <% end %>
-    </li>
-    <% end %>
-</ul>
-
-<center><form action='/links/new'>
+  </ul>
+</div>
+<br>
+<br>
+<form action='/links/new'>
 <input type="submit" value="Add New Link" class="button">
-</form></center>
+</form>
